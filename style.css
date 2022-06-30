@@ -1,0 +1,38 @@
+*{
+    /* border: solid 1px red; */
+
+}
+
+body,html{
+    padding:0;
+    margin:0;
+    height: 100vh;
+    width: 100vw;
+}
+#main-container{
+    display:flex;
+    border: solid 1px black;
+    width:50%;
+    
+ 
+   
+    
+   
+    
+    
+}
+
+.row{
+    display:flex;
+    flex-wrap:wrap;
+    flex:1;
+    
+}
+
+.cell{
+    flex:1;
+    flex-basis: 100%;
+    border: solid 1px black;
+    aspect-ratio: 1 / 1;
+    
+}

@@ -1,9 +1,10 @@
 const mainContainer = document.getElementById('main-container');
-let gridSize = 16;
+let gridSize = 64;
 createGrid();
 
 function createGrid(){
-    for(let i = 0; i < 16; i++){
+    let gridSize = prompt("Grid size?");
+    for(let i = 0; i < gridSize; i++){
         const row = document.createElement('div')
         // row.innerText = "hello";
         row.classList.add('row');

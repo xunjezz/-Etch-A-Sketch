@@ -1,34 +1,23 @@
-const mainContainer = document.getElementById('main-container');
+const mainContainer = document.getElementById('main-container'); //declare the grid
 const sideBarGrid = document.getElementById('side-bar-grid');
 let gridSizeBar = document.getElementById('my-range');
 let gridSize = gridSizeBar.value;
 let gridRange = document.createElement('h3');
 gridRange.innerText = `${gridSize} x ${gridSize}`;
 sideBarGrid.appendChild(gridRange);
+// let color ="";
 
 
 
 
-let redRange = document.getElementById('red-range');
-let greenRange = document.getElementById('green-range');
-let blueRange = document.getElementById('blue-range');
-let colorShow = document.getElementById('color-show');
-redRange.addEventListener('input', createColor );
-greenRange.addEventListener('input', createColor );
-blueRange.addEventListener('input', createColor );
-function createColor(e){
-    
-    let color = `rgb(${redRange.value},${greenRange.value},${blueRange.value})`;
-    colorShow.setAttribute('style', `background-color: ${color}`);
-}
 
 
-//afer variables are called//
+
 createGrid();
-gridSizeBar.addEventListener('input', createGrid);
+gridSizeBar.addEventListener('input', createGrid); //listen for grid size
 
 
-function createGrid(e){
+function createGrid(e){ //make the grid box
     gridSize = gridSizeBar.value;
     gridRange.innerText = `${gridSize} x ${gridSize}`;
     mainContainer.innerHTML ="";
@@ -38,7 +27,7 @@ function createGrid(e){
         row.classList.add('row');
         row.setAttribute('id',`row-${i}`)
         mainContainer.appendChild(row);
-
+        
         for(let j = 1; j <=gridSize; j++){
             const cell = document.createElement('div');
             // cell.innerText ="0"
@@ -48,8 +37,38 @@ function createGrid(e){
             
         }
     }
-  
+    
 }    
 
+let redRange = document.getElementById('red-range'); //decalre the color bars
+let greenRange = document.getElementById('green-range');
+let blueRange = document.getElementById('blue-range');
+let colorShow = document.getElementById('color-show');
+redRange.addEventListener('input', createColor );// make listeners for color bars
+greenRange.addEventListener('input', createColor );
+blueRange.addEventListener('input', createColor );
 
+
+function createColor(e){ //set background to the color bar values
+    
+    let color = `rgb(${redRange.value},${greenRange.value},${blueRange.value})`;
+    colorShow.setAttribute('style', `background-color: ${color}`);
+    return color;
+}
+
+
+const cell = document.querySelectorAll('.cell');
+cell.forEach( cells =>{
+    cells.addEventListener('mousedown', function drawStart(e){
+        console.log('celly down', e);
+
+        cells.setAttribute('style', `background-color: ${createColor(e)}` );
+    });
+})
+// cell.addEventListener('mouseover',drawThru);
+// cell.addEventListener('mouseup', drawFinish);
+let pen = false;
+
+
+    
 

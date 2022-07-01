@@ -1,10 +1,10 @@
 const mainContainer = document.getElementById('main-container');
-const sideBar = document.querySelector('.side-bar');
+const sideBarGrid = document.getElementById('side-bar-grid');
 let gridSizeBar = document.getElementById('my-range');
 let gridSize = gridSizeBar.value;
 let gridRange = document.createElement('h3');
 gridRange.innerText = `${gridSize} x ${gridSize}`;
-sideBar.appendChild(gridRange);
+sideBarGrid.appendChild(gridRange);
 
 
 

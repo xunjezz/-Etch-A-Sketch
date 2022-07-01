@@ -1,7 +1,7 @@
-/* *{
-    border: solid 1px red;
+*{
+    /* outline: solid 1px red; */
 
-}  */
+} 
 
 body,html{
     padding:0;
@@ -32,10 +32,16 @@ max-height:100vh
 #side-bar{
     flex-basis: content;
 }
+
+#side-bar-color{
+    display: flex;
+    flex-direction: column;
+}
 #main-container{
     display:flex;
-    border: solid 1px black;
-    width: 50%;
+    border: solid 2px black;
+    width: 75%;
+    
     aspect-ratio: 1/1;
     
     
@@ -51,7 +57,24 @@ max-height:100vh
 .cell{
     flex:1;
     flex-basis:100%;
-    border: solid 1px black;
+    outline:solid 1px black;
     aspect-ratio: 1 / 1;
     
+}
+#color-box{
+    display:flex;
+    align-items: center;
+    gap: 1em;
+    height: max-content;
+    
+}
+#color-show{
+    border: solid 2px black;
+    flex-shrink: 1;
+    width:2em;
+    aspect-ratio: 1 /1;
+}
+
+p{
+    margin: 0;
 }

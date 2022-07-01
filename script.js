@@ -1,12 +1,31 @@
 const mainContainer = document.getElementById('main-container');
-let gridSize = 64;
-createGrid();
+const sideBar = document.querySelector('.side-bar');
+let gridSizeBar = document.getElementById('my-range');
+let gridSize = gridSizeBar.value;
+let gridRange = document.createElement('h3');
+gridRange.innerText = `${gridSize} x ${gridSize}`;
+sideBar.appendChild(gridRange);
 
-function createGrid(){
-    let gridSize = prompt("Grid size?");
+
+
+
+
+
+
+
+
+//afer variables are called//
+createGrid();
+gridSizeBar.addEventListener('input', createGrid);
+
+
+function createGrid(e){
+    gridSize = gridSizeBar.value;
+    gridRange.innerText = `${gridSize} x ${gridSize}`;
+    mainContainer.innerHTML ="";
+    
     for(let i = 0; i < gridSize; i++){
         const row = document.createElement('div')
-        // row.innerText = "hello";
         row.classList.add('row');
         row.setAttribute('id',`row-${i}`)
         mainContainer.appendChild(row);

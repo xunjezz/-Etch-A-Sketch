@@ -1,7 +1,7 @@
 /* *{
     border: solid 1px red;
 
-} */
+}  */
 
 body,html{
     padding:0;
@@ -25,10 +25,8 @@ justify-content: center;
 }
 #content{
 display:flex;
-gap: 8em;
-align-items: flex-start;
-flex-direction: row;
-/* flex: 1; */
+justify-content: space-between;
+/* align-items: flex-start; */
 max-height:100vh
 }
 #side-bar{
@@ -37,6 +35,9 @@ max-height:100vh
 #main-container{
     display:flex;
     border: solid 1px black;
+    width: 50%;
+    aspect-ratio: 1/1;
+    
     
 }
 

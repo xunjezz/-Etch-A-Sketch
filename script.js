@@ -9,9 +9,18 @@ sideBarGrid.appendChild(gridRange);
 
 
 
-
-
-
+let redRange = document.getElementById('red-range');
+let greenRange = document.getElementById('green-range');
+let blueRange = document.getElementById('blue-range');
+let colorShow = document.getElementById('color-show');
+redRange.addEventListener('input', createColor );
+greenRange.addEventListener('input', createColor );
+blueRange.addEventListener('input', createColor );
+function createColor(e){
+    
+    let color = `rgb(${redRange.value},${greenRange.value},${blueRange.value})`;
+    colorShow.setAttribute('style', `background-color: ${color}`);
+}
 
 
 //afer variables are called//

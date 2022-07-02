@@ -41,7 +41,7 @@ function createGrid(e){ //make the grid box
     const cell = document.querySelectorAll('.cell'); //make cell array clickable to 
     console.log(cell);                               //to be drawn on   
     cell.forEach(cells => {
-        cells.addEventListener('mousedown',drawStart);
+        cells.addEventListener('mouseover',drawStart);
     });
         
 }    

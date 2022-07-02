@@ -5,7 +5,7 @@ let gridSize = gridSizeBar.value;
 let gridRange = document.createElement('h3');
 gridRange.innerText = `${gridSize} x ${gridSize}`;
 sideBarGrid.appendChild(gridRange);
-
+let cursor = false;
 
 
 
@@ -41,14 +41,28 @@ function createGrid(e){ //make the grid box
     const cell = document.querySelectorAll('.cell'); //make cell array clickable to 
     console.log(cell);                               //to be drawn on   
     cell.forEach(cells => {
-        cells.addEventListener('mouseover',drawStart);
+        cells.addEventListener('mousedown',drawStart);
+        cells.addEventListener('mouseover',drawThru);
+        cells.addEventListener('mouseup',drawEnd);
     });
-        
+    
 }    
 
 function drawStart(e){
     
     this.setAttribute('style', `background-color: ${createColor(e)}`);
+    cursor = true;
+    return cursor;
+}
+
+function drawThru(e){
+    if(cursor == true){
+    this.setAttribute('style', `background-color: ${createColor(e)}`);
+    }
+}
+
+function drawEnd(e){
+    cursor = false;
 }
 
 let redRange = document.getElementById('red-range'); //decalre the color bars
@@ -85,8 +99,6 @@ button.addEventListener('click', () => window.location.reload());
 
 
 
-// cell.addEventListener('mouseover',drawThru);
-// cell.addEventListener('mouseup', drawFinish);
 let pen = false;
 
 

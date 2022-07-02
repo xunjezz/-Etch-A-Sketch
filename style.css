@@ -6,8 +6,8 @@
 body,html{
     padding:0;
     margin:0;
-    height:100%;
-    width: 100%;
+    height:100vh;
+    width: 100vw;
     overflow:auto;
     background-color: rgb(189, 216, 216);
     color:hsl(208, 27%, 37%);
@@ -19,7 +19,7 @@ body,html{
 #full-page{
     display: flex;
     flex-flow: column;
-    max-height:50%;
+    max-height:90%;
     align-items: center;
     justify-content:space-between;
     /* flex: 0 1 0; */
@@ -28,8 +28,8 @@ body,html{
 }
 #header{
 display:flex;
-align-items: center;
-justify-content: center;
+/* align-items: center; */
+/* justify-content: center; */
 /* flex: 0 1 0; */
 
 
@@ -38,7 +38,7 @@ justify-content: center;
     margin: 1em 0 0 0;
     font-size: 30px;
     /* flex: 0 1 0; */
-    max-width: 4vw;
+    width: 4vw;
  }
 h2{
     font-size: 25px;
@@ -50,6 +50,7 @@ h2{
     /* flex-basis: content; */
     /* flex:0 1 0; */
     gap: 6em;
+    order:3;
 }
 
 #side-bar-color{
@@ -66,6 +67,7 @@ h2{
     margin-top: 1em;
     flex: 0 1 0;
     aspect-ratio: 1/1;
+    order: 2;
     
     
 }

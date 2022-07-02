@@ -69,7 +69,9 @@ function createColor(e){ //set background to the color bar values
 
 
 const button = document.getElementById('button');
-button.addEventListener('click', createGrid); 
+button.addEventListener('click', () => window.location.reload());
+
+
 
 
 

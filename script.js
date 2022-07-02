@@ -68,22 +68,8 @@ function createColor(e){ //set background to the color bar values
 }
 
 
-
-// cell.forEach( cells =>{
-//     // cells.addEventListener('mousedown', function drawStart(e){
-//     //     console.log('celly down', e);
-
-//     //     cells.setAttribute('style', `background-color: ${createColor(e)}` );
-//     // });
-// })
-
-// for(const cells of cell){
-//     // crea
-//     cells.addEventListener('click', function drawStart(e){
-//         console.log('cells clicked', e);
-//     cells.setAttribute('style', `background-color: ${createColor(e)}`);
-//     });
-// }   
+const button = document.getElementById('button');
+button.addEventListener('click', createGrid); 
 
 
 

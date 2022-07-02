@@ -6,15 +6,17 @@
 body,html{
     padding:0;
     margin:0;
-    max-height: 100vh;
+    height:100%;
     width: 100%;
+    overflow:hidden;
+    background-color: rgb(189, 216, 216);
     
 }
 
 #full-page{
     display: flex;
     flex-direction: column;
-    max-height:100vh;
+    max-height:100%;
     align-items: center;
     justify-content:space-between;
     
@@ -31,7 +33,7 @@ justify-content: center;
 #side-bar{
     display: flex;
     flex-basis: content;
-    gap: 7em;
+    gap: 6em;
 }
 
 #side-bar-color{
@@ -41,7 +43,7 @@ justify-content: center;
 #main-container{
     display:flex;
     border: solid 2px black;
-    width: 60vw;
+    width: 50vw;
     height: fit-content;
     margin-top: 2em;
     

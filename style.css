@@ -20,14 +20,14 @@ body,html{
     display: flex;
     flex-flow: column;
     max-height:90%;
-    align-items: center;
+    /* align-items: center; */
     justify-content:space-between;
     /* flex: 0 1 0; */
     
     
 }
 #header{
-display:flex;
+/* display:flex; */
 /* align-items: center; */
 /* justify-content: center; */
 /* flex: 0 1 0; */
@@ -37,8 +37,9 @@ display:flex;
  h1{
     margin: 1em 0 0 0;
     font-size: 30px;
-    /* flex: 0 1 0; */
+    flex: 0 1 0;
     width: 4vw;
+    align-self: center;
  }
 h2{
     font-size: 25px;
@@ -68,6 +69,7 @@ h2{
     flex: 0 1 0;
     aspect-ratio: 1/1;
     order: 2;
+    align-self: center;
     
     
 }
@@ -111,7 +113,7 @@ p{
 }
 
 button{
-    border-radius: 8px;
+    border-radius: 10px;
     font-family: inherit;
     background-color: hsl(208, 27%, 37%);
     color:rgb(189, 216, 216);

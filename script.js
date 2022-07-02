@@ -5,7 +5,7 @@ let gridSize = gridSizeBar.value;
 let gridRange = document.createElement('h3');
 gridRange.innerText = `${gridSize} x ${gridSize}`;
 sideBarGrid.appendChild(gridRange);
-// let color ="";
+
 
 
 
@@ -38,7 +38,18 @@ function createGrid(e){ //make the grid box
         }
     }
     
+    const cell = document.querySelectorAll('.cell'); //make cell array clickable to 
+    console.log(cell);                               //to be drawn on   
+    cell.forEach(cells => {
+        cells.addEventListener('mousedown',drawStart);
+    });
+        
 }    
+
+function drawStart(e){
+    
+    this.setAttribute('style', `background-color: ${createColor(e)}`);
+}
 
 let redRange = document.getElementById('red-range'); //decalre the color bars
 let greenRange = document.getElementById('green-range');
@@ -57,14 +68,35 @@ function createColor(e){ //set background to the color bar values
 }
 
 
-const cell = document.querySelectorAll('.cell');
-cell.forEach( cells =>{
-    cells.addEventListener('mousedown', function drawStart(e){
-        console.log('celly down', e);
 
-        cells.setAttribute('style', `background-color: ${createColor(e)}` );
-    });
-})
+// cell.forEach( cells =>{
+//     // cells.addEventListener('mousedown', function drawStart(e){
+//     //     console.log('celly down', e);
+
+//     //     cells.setAttribute('style', `background-color: ${createColor(e)}` );
+//     // });
+// })
+
+// for(const cells of cell){
+//     // crea
+//     cells.addEventListener('click', function drawStart(e){
+//         console.log('cells clicked', e);
+//     cells.setAttribute('style', `background-color: ${createColor(e)}`);
+//     });
+// }   
+
+
+
+
+
+
+
+
+
+
+
+
+
 // cell.addEventListener('mouseover',drawThru);
 // cell.addEventListener('mouseup', drawFinish);
 let pen = false;
